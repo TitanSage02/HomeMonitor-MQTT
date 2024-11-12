@@ -72,9 +72,7 @@ char pass[] = "Votre_Mot_de_passe";
 
 ### Topics MQTT
 
-- `salon/led` : Contrôle de la LED dans le salon
 - `salon/interrupt` : État du bouton-poussoir du salon
-- `chambre/led` : Contrôle de la LED dans la chambre
 - `chambre/interrupt` : État du bouton-poussoir de la chambre
 
 Assurez-vous que ces topics sont bien configurés dans Node-RED et l'ESP32 pour correspondre aux actions souhaitées.
@@ -84,10 +82,9 @@ Assurez-vous que ces topics sont bien configurés dans Node-RED et l'ESP32 pour 
 - **Démarrer Node-RED** : Lancez Node-RED et ouvrez le tableau de bord pour contrôler les LED du salon et de la chambre.
 - **ESP32** : Connectez l'ESP32 et vérifiez que les boutons et les LED répondent correctement aux commandes MQTT et aux actions physiques.
 
-
 ## Captures d'écran
 
-
+['Scrennshot']('assets\screnshot.png')
 
 ## À propos
 
