@@ -84,7 +84,7 @@ Assurez-vous que ces topics sont bien configurés dans Node-RED et l'ESP32 pour 
 
 ## Captures d'écran
 
-['Scrennshot']('assets\screnshot.png')
+[Scrennshot](assets\screnshot.png)
 
 ## À propos
 
