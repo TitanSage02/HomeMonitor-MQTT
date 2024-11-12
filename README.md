@@ -10,7 +10,6 @@ Le projet comprend deux pièces : une chambre et un salon, chacune équipée d'u
 - [Pré-requis](#Pré-requis)
 - [Installation](#Installation)
 - [Configuration](#Configuration)
-- [Déploiement sur GitHub](#Déploiement-sur-GitHub)
 - [Utilisation](#Utilisation)
 - [Captures d'écran](#Captures-décran)
 - [À propos](#À-propos)
