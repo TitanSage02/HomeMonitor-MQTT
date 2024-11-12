@@ -109,7 +109,6 @@ void loop() {
   // Control Salon LED with physical button and publish state
   if (buttonStateS != ledStateS) {  // Detect button press change
     ledStateS = buttonStateS;
-    digitalWrite(LED_S, ledStateS ? HIGH : LOW);
     mqttClient.publish("salon/interrupt", ledStateS ? "1" : "0");  // Publish state change
     Serial.println(ledStateS ? "Salon LED turned ON via button" : "Salon LED turned OFF via button");
   }
@@ -117,7 +116,6 @@ void loop() {
   // Control Chambre LED with physical button and publish state
   if (buttonStateC != ledStateC) {
     ledStateC = buttonStateC;
-    digitalWrite(LED_C, ledStateC ? HIGH : LOW);
     mqttClient.publish("chambre/interrupt", ledStateC ? "1" : "0");
     Serial.println(ledStateC ? "Chambre LED turned ON via button" : "Chambre LED turned OFF via button");
   }
