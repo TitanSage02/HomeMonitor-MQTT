@@ -15,7 +15,7 @@ char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
 
 // MQTT Config
-#define MQTT_HOST "mqtt-dashboard.com"
+#define MQTT_HOST "broker.hivemq.com"
 #define MQTT_PORT 1883 
 
 WiFiClient wifiClient;
@@ -30,9 +30,10 @@ void setup_wifi() {
   Serial.println("Connecting to WiFi...");
   
   while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
+    delay(10);
     Serial.print(".");
   }
+
   Serial.println("\nConnected to WiFi!");
 }
 
@@ -48,7 +49,7 @@ void setup_mqtt() {
       mqttClient.subscribe("chambre/interrupt");  // Subscription for Chambre LED control
     } else {
       Serial.print(".");
-      delay(500);
+      delay(20);
     }
   }
 }
@@ -70,7 +71,8 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
     ledStateS = (message == "1");  // Convert message to boolean for LED control
     digitalWrite(LED_S, ledStateS ? HIGH : LOW);
     Serial.println(ledStateS ? "Salon LED turned ON" : "Salon LED turned OFF");
-  } else if (String(topic) == "chambre/interrupt") {
+  }
+   else if (String(topic) == "chambre/interrupt") {
     ledStateC = (message == "1");
     digitalWrite(LED_C, ledStateC ? HIGH : LOW);
     Serial.println(ledStateC ? "Chambre LED turned ON" : "Chambre LED turned OFF");
